@@ -1,13 +1,20 @@
 import type { Page } from "@playwright/test";
 
 export class Login {
-  constructor(public readonly page: Page) {}
+  constructor(private readonly page: Page) {}
   clicks_on = {
     remember_me: async () => {
       await this.page.getByLabel("Remember me").click();
     },
     sign_in: async () => {
       await this.page.getByRole("button", { name: "SIGN IN" }).click();
+    },
+    sign_up: async () => {
+      await this.page
+        .getByRole("link", {
+          name: /don't have an account\? sign up/i,
+        })
+        .click();
     },
   };
   types_into = {
