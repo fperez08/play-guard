@@ -18,6 +18,10 @@
   "homepage": "https://github.com/fperez08/play-guard#readme",
   "devDependencies": {
     "@playwright/test": "^1.49.1",
-    "@types/node": "^22.10.7"
+    "@types/node": "^22.10.7",
+    "eslint-plugin-playwright": "^2.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }
